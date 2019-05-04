@@ -1,0 +1,20 @@
+---
+- hosts: ranchermaster
+  become: yes
+  tasks:
+          - name: Pull Rancher Container
+            docker_image:
+                    name: rancher/rancher
+                    state: present
+          - name: Run Rancher Container
+            docker_container:
+                    name: rancher
+                    state: started
+                    image: rancher/rancher
+                    detach: yes
+                    #restart-policy: unless-stopped
+                    ports:
+                            - "80:80" 
+                            - "443:443"
+
+

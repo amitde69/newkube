@@ -1,0 +1,19 @@
+---
+ - hosts: kubecluster
+   become: yes
+   tasks:
+        - name: install docker
+          apt:
+                pkg: docker.io
+                update_cache: yes
+                state: present
+         
+        - name: install pip
+          apt:
+                  pkg: python-pip
+                  state: present
+
+        - name: install docker.py
+          pip: 
+            name: docker.py
+            state: present        
