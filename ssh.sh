@@ -1,7 +1,6 @@
 hosties=( 
 	kubeworker01 
 	kubeworker02 
-	kubemaster
 )
 
 for host in "${hosties[@]}"; do
