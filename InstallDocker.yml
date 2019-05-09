@@ -1,5 +1,5 @@
 ---
- - hosts: kubecluster
+ - hosts: kube
    become: yes
    tasks:
         - name: install docker

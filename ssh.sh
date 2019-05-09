@@ -1,3 +1,7 @@
+chmod 700 key.pem
+
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa | echo 'y'
+
 hosties=( 
 	kubeworker01 
 	kubeworker02 
