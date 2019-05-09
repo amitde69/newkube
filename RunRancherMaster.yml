@@ -1,5 +1,5 @@
 ---
-- hosts: ranchermaster
+- hosts: rancher
   become: yes
   tasks:
           - name: Pull Rancher Container

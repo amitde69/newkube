@@ -17,3 +17,9 @@
           pip: 
             name: docker.py
             state: present        
+
+        - name: add user ubuntu to docker group
+          user:
+                  name: ubuntu
+                  group: docker
+                  

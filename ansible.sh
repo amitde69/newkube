@@ -9,6 +9,8 @@ sudo cat << EOF > /etc/ansible/hosts
 [kube]
 kubeworker01
 kubeworker02
+[rancher]
+kubeworker01
 EOF
 
 ssh -i key.pem ubuntu@kubeworker02 'sudo apt update && sudo apt install python -y'
